@@ -30,7 +30,7 @@ export default function About({ pageInfo }: Props) {
         <h4 className="text-2xl text-center md:text-left md:text-4xl font-semibold">
           Here is a <span className="underline decoration-[#E1AE00]/50">little</span> background
         </h4>
-        <p className="text-xs md:text-base leading-relaxed	tracking-wider">
+        <p className="text-sm md:text-base leading-relaxed	tracking-wider">
           {pageInfo?.backgroundInformation}
         </p>
       </div>
