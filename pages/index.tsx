@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import type { NextPage, GetStaticProps } from 'next';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import Header from '../components/Header';

@@ -11,17 +11,6 @@ type Props = {
 };
 
 export default function Hero({ pageInfo }: Props) {
-  // const [text, count] = useTypewriter({
-  //   words: [
-  // ,
-  //     'I build mobile applications',
-  //     'web applications',
-  //     'and great websites !',
-  //   ],
-  //   loop: true,
-  //   delaySpeed: 2000,
-  // });
-
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
