@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={project?._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen"
           >
             <a
               href={project?.linkToBuild}
@@ -30,7 +30,7 @@ export default function Projects({ projects }: Props) {
               className="w-full flex items-center justify-center"
             >
               <motion.img
-                className="w-1/2"
+                className="md:w-1/2"
                 initial={{ y: -300, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Projects({ projects }: Props) {
             </a>
 
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-2xl md:text-4xl font-semibold text-center">
                 <span className="underline decoration-[#E1AE00]/50">
                   Case Study {i + 1} of {projects?.length}:
                 </span>{' '}
@@ -59,7 +59,7 @@ export default function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">{project?.summary}</p>
+              <p className="md:text-lg text-justify  md:text-left">{project?.summary}</p>
             </div>
           </div>
         ))}

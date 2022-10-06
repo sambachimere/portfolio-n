@@ -9,7 +9,7 @@ type Props = {
 
 export default function ExperienceCard({ experience }: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] snap-center bg-[#292929] p-10 opacity-100 border border-[#292929] hover:border-white cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[290px] md:w-[600px] snap-center bg-[#292929] p-7 md:p-10 opacity-100 border border-[#292929] hover:border-white cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           y: -100,
@@ -20,14 +20,14 @@ export default function ExperienceCard({ experience }: Props) {
         }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+        className="w-20 h-20 md:w-32 md:h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src={urlFor(experience.companyImage).url()}
         alt=""
       />
 
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Freelance</h4>
-        <p className="font-bold text-2xl mt-1">SAMBA DIAW</p>
+        <h4 className="text-2xl md:text-4xl font-light">Freelance</h4>
+        <p className="font-bold text-xl md:text-2xl mt-1">SAMBA DIAW</p>
         <div className="flex space-x-2 my-2">
           {experience.technologies.map((technology) => (
             <img
@@ -38,12 +38,12 @@ export default function ExperienceCard({ experience }: Props) {
             />
           ))}
         </div>
-        <p className="uppercase py-5 text-gray-300">
+        <p className="uppercase py-5 text-gray-300 text-sm">
           {new Date(experience.dateStarted).toDateString()} -{' '}
           {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 ml-5 md:text-lg">
           {/* <ul className="list-disc space-y-4 ml-5 text-lg overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#E1AE00]/80"> */}
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
